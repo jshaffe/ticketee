@@ -8,3 +8,7 @@ Then /^(?:|I )should be on (.+)$/ do |page_name|
   puts current_path
   current_path.should == '/projects/1'
 end
+
+Then /^(?:|I )should not see "([^\"]*)"$/ do |text|
+    page.should have_no_content(text)
+end
